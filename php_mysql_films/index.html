@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Films</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css"></style>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/functions.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Films</h1>
+    </header>
+    <main>
+        <form id="frmSearchFilm" method="POST">
+            <fieldset>                
+                <legend>Search</legend>
+                <button id="btnNewMovie">New movie</button>
+                <label for="txtFilm">Film title</label>
+                <input type="text" id="txtFilm" name="film" required>
+                <button type="submit">Search</button>
+            </fieldset>
+        </form>
+        <section id="filmResults">
+        </section>
+
+        <!-- Loading image -->
+        <div id="loading">
+            <img src="img/loading.gif">
+        </div>
+        
+        <!-- Modals -->
+        <div id="modalFilm" class="modal">
+            <header>
+                <h3 id="headerFilm">New film</h3>
+            </header>
+            <main>
+                <label for="txtTitle">Title</label>
+                <input type="text" id="txtTitle" required><br>
+                <label for="txtOverview">Overview</label>
+                <textarea id="txtOverview"></textarea><br>
+                <label for="txtReleaseDate">Release date</label>
+                <input type="date" id="txtReleaseDate"><br>
+                <label for="txtRuntime">Runtime (minutes)</label>
+                <input type="number" id="txtRuntime" class="number"><br>
+                <div>
+                    <div class="smallButtons">
+                        <img src="img/assign.png" id="btnAssignDirector" class="smallButton">
+                        <img src="img/deassign.png" id="btnDeassignDirector" class="smallButton">
+                    </div>
+                    <label for="lstDirector">Directors</label>                    
+                    <select id="lstDirector" size="4">
+                    </select>
+                </div>                
+                <div>
+                    <div class="smallButtons">
+                        <img src="img/assign.png" id="btnAssignActor" class="smallButton">
+                        <img src="img/deassign.png" id="btnDeassignActor" class="smallButton">
+                    </div>
+                    <label for="lstActor">Actors</label>
+                    <select id="lstActor" size="10">
+                    </select>                
+                </div>
+            </main>
+            <div class="buttons">
+                <button id="btnFilmOk">Add film</button>
+                <button id="btnFilmCancel">Cancel</button>
+            </div>
+        </div>
+
+        <div id="modalPerson" class="modal">
+            <header>
+                <h3 id="headerPerson">New director</h3>
+            </header>
+            <main>
+                <form id="frmSearchPerson" method="POST">
+                    <fieldset>                
+                        <legend>Search</legend>
+                        <label for="txtPerson">Search director</label>
+                        <input type="text" id="txtPerson" required>
+                        <button type="submit">Search</button>
+                    </fieldset>
+                </form>
+                <section id="personResults">
+                    <div class="smallButtons">
+                        <img src="img/add.png" id="btnAddPerson" class="smallButton">
+                        <img src="img/delete.png" id="btnDeletePerson" class="smallButton">
+                    </div>
+                    <label for="lstPerson">Directors</label>                    
+                    <select id="lstPerson" size="4">
+                    </select>
+                </section>
+            </main>
+            <div class="buttons">
+                <button id="btnPersonOk">Assign director</button>
+                <button id="btnPersonCancel">Cancel</button>
+            </div>
+        </div>
+
+        <div id="modalMessage" class="modal">
+            <main></main>
+            <div class="buttons">
+                <button id="btnMessageCancel">Ok</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2020 Arturo Mora-Rioja
+    </footer>
+</body>
+</html>

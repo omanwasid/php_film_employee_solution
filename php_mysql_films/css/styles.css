@@ -1,0 +1,145 @@
+* {
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, div.buttons {
+    padding: 10px 0 10px 10px;
+    color: floralwhite;
+    background-color: midnightblue;
+}
+div.buttons {
+    text-align: right;
+    padding-right: 60px;
+}
+
+main {
+    padding: 10px;
+    line-height: 1.4em;
+}
+
+section#filmResults {
+    margin-bottom: 30px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 5px 0 5px 0;
+    color: floralwhite;
+    background-color: midnightblue;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+label {
+    float: left;
+    width: 30%;
+}
+div.modal label {
+    width: 20%;
+}
+input, textarea, select {
+    width: 65%;
+}
+div.modal input, textarea, select {
+    width: 70%;
+}
+input#txtFilm {
+    width: 40%;
+}
+textarea {
+    height: 200px;
+}
+.number {
+    text-align: right;
+}
+button#btnNewMovie {
+    float: right;
+}
+
+table {
+    border-spacing: 0px;
+}
+th, td {
+    border: solid thin black;
+    padding: 0px 10px;
+}
+th {
+    color: floralwhite;
+    background-color: brown;
+    text-align: left;
+}
+th.action, td.action {
+    background-color: white;
+    border: none;
+    padding: 0px 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+div#loading {
+    display: none;
+    text-align: center;
+}
+
+div.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    border: solid thick midnightblue;
+    border-radius: 10px;
+    margin: 0px 10px 30px 10px;
+    width: 95%;
+    background-color: floralwhite;
+}
+div.modal#modalPerson {
+    height: 55%;
+    z-index: 3;
+}
+div.modal#modalMessage {
+    height: 20%;
+    z-index: 3;
+}
+div.cover {
+    z-index: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;    
+    background-color: grey;
+    opacity: 0.5;
+}
+div.secondLevel {
+    z-index: 2;
+}
+
+select#lstPerson {
+    height: 200px;
+}
+div.smallButtons {
+    float: right;
+}
+img.smallButton {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 2px;
+    padding: 2px;
+    border: thin solid black;
+    border-radius: 3px;
+    background-color: lightgray;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
